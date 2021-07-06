@@ -28,4 +28,12 @@
 # 19 189.81 Rub.
 # 20 199.80 Rub.
 
-# TODO: your code here
+price = float(input("Цена: "))
+i = 1
+while i <= 20:
+    if i*price*100 % 100 == 0 or i*price*100 % 10 == 0:
+        Tabl = str(i)+" "+str(i*price)+"0 Rub."
+    else:
+        Tabl = str(i)+" "+str(i*price)+" Rub."
+    print(Tabl)
+    i = i+1
