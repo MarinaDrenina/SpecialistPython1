@@ -9,4 +9,11 @@
 # 123
 # 1234
 
-# TODO: your code here
+number=int(input("Ввод числа: "))
+i=1
+total_number=""
+
+while i<=number:
+    total_number=total_number+str(i)
+    print(total_number)
+    i=i+1
