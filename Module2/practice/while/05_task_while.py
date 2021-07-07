@@ -16,5 +16,16 @@
  #
 # #
 
-
-# TODO: your code here
+number=int(input("Ввод числа: "))
+i=1
+while i<=number:
+    j = 1
+    line = ""
+    while j<=number:
+        if j==i or j==number-i+1:
+            line=line+"#"
+        else:
+            line = line + " "
+        j=j+1
+    print(line)
+    i=i+1
