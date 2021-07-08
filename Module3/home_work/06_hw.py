@@ -34,12 +34,36 @@ items = [
 # Найдите:
 print("Товары на складе представлены брэндами: ")
 
-# TODO: your code here
+list_brand=[]
+list_brand_unik=[]
+brands=""
+for i in range(len(items)):
+    list_brand.append (items[i]["brand"])
+list_brand_unik=set(list_brand)
+
+for i,el in enumerate(list_brand_unik,1):
+    brands=brands+el
+    if i<len(list_brand_unik):
+        brands = brands+", "
+print(brands)
 
 print("На складе больше всего товаров брэнда(ов): ")
 
-# TODO: your code here
+max_count=0
+many=""
+for el in list_brand_unik:
+    if list_brand.count(el)>max_count:
+        max_count=list_brand.count(el)
+        many=el
+    elif list_brand.count(el)==max_count:
+        many=many+", "+el
+print(many)
 
 print("На складе самый дорогой товар брэнда(ов): ")
-
-# TODO: your code here
+max_price=0
+rich=""
+for i in range(len(items)):
+    if items[i]["price"]>max_price:
+        max_price=items[i]["price"]
+        rich=items[i]["brand"]
+print(rich)
