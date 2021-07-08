@@ -5,3 +5,10 @@
 # Пример:
 # Дано: [2, -5, 8, 9, -25, 25, 4]
 # Результат: [3, 5, 2]
+
+itog=[]
+numbers= [2, -5, 8, 9, -25, 25, 4]
+for el in numbers:
+    if el>0 and el**0.5%1==0:
+        itog.append(int(el**0.5))
+print(itog)
