@@ -3,7 +3,12 @@
 
 names = ["Иван", "Ирина", "Вячеслав", "Василий", "Петр"]
 
-# TODO: your code here
-
 # Пример вывода:
 # Иван, Ирина, Вячеслав, Василий, Петр
+
+s = ""
+for i, el in enumerate(names, 1):
+    s = s + el
+    if i != len(names):
+        s = s + ", "
+print(s)
