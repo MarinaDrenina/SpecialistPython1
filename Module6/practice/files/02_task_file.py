@@ -6,10 +6,29 @@
 # 1. На какую сумму было продано товаров
 # 2. Цену самого дорогого товара
 # 3. Цену самого дешевого товара
-
+# Подсказка: для преобразования строки в список вспомните про метод строки .split()
 # Совет: сначала считайте все цены из файла, сохраните в список,
 # преобразовав каждую цену к числу(цены в файле хранятся в виде строк)
 # А затем, работам с привычным списком, выполните задания
-prices = []
 
-# Подсказка: для преобразования строки в список вспомните про метод строки .split()
+path = "files/sold.txt"
+f = open(path, "r", encoding="UTF-8")
+prices = []
+new_line = ""
+for line in f:
+    new_line = new_line + line
+prices = new_line.split()
+print(prices)
+
+total = 0
+max_price = 0
+min_price = float(prices[0])
+for el in prices:
+    total = total + float(el)
+    if float(el) > max_price:
+        max_price = float(el)
+    if float(el) < min_price:
+        min_price = float(el)
+print("Товаров продано на:", total)
+print("Максимальная цена:", max_price)
+print("Минимальная цена:", min_price)
