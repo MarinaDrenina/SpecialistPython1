@@ -4,3 +4,14 @@
 # На вход программе подается строка формата nxm (x - латинская буква икс).
 # Пример входных данных: 12x6
 # Если данные вводятся в неверном формате, сообщить об этом и запросить ввод заново.
+
+while True:
+    try:
+        in_data=input("Введите размер в формате nxm: ")
+        if in_data.index("x")!="" and in_data.replace("x","").isdigit():
+            print(int(in_data.split("x")[0])//int(in_data.split("x")[1]))
+            break
+        else:
+            raise ValueError("Некорректный ввод")
+    except ValueError:
+        print("Некорректный ввод")
