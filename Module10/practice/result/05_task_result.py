@@ -25,3 +25,14 @@
 # 2
 # Выходные данные-2:
 # 0
+H=20
+n=7
+k=4
+
+price=[]
+for i in range(1,H+1):
+    if (k*i+1)<n:
+        price.append((n-(k*i+1))*200)
+    else:
+        price.append(( (k * i + 1-n)) * 100)
+print (min(price))
