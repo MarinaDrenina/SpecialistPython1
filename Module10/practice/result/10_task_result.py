@@ -3,3 +3,16 @@
 # Примечание: все элементы списка должны быть гарантировано уникальными(неповторяющимися)
 # Если создать список с заданными параметрами невозможно - функция должна выбросить исключение(любое)
 
+import random
+def rand(n,a=0,b=5):
+    my_list=[]
+    if b-a+1<n:
+        return ("Невозможно")
+    while len(my_list)!=n:
+        rand_char=random.randint(a,b)
+        if rand_char not in my_list:
+            my_list.append(rand_char)
+
+    return(my_list)
+
+print(rand(10))
